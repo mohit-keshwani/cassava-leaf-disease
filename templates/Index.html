@@ -1,0 +1,140 @@
+<html>
+<title>Cassava Leaf Disease Predictor</title>
+<link rel = "icon" href = "../static/logo.jpg" type = "image/x-icon"> 
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<script src="https://kit.fontawesome.com/5f3f547070.js" crossorigin="anonymous"></script>
+<link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+<style>
+.jumbotron {
+		background-image: url("../static/cassava.jpg");
+		background-size: 33.33%;
+    color: #fff;
+    padding: 107px 30px;
+}
+.ml-container {
+    padding: 10px 300px;
+}
+.navbar {
+    margin-bottom: 0;
+    background-color: #000000;
+    z-index: 9999;
+    border: 0;
+    font-size: 14px !important;
+    line-height: 5 !important;
+    letter-spacing: 4px;
+    border-radius: 0;
+}
+.navbar li a, .navbar .navbar-brand {
+    color: #fff !important;
+}
+.navbar-nav li a:hover, .navbar-nav li.active a {
+    color: #000000     !important;
+    background-color: #fff !important;
+}
+.navbar-default .navbar-toggle {
+    border-color: transparent;
+    color: #fff !important;
+}
+
+.my-cta-button{
+	background: #f9f9f9;
+   	border: 2px solid #000000;
+    border-radius: 1000px;
+    box-shadow: 3px 3px #8c8c8c;
+	margin-top: 10px;
+    padding: 10px 36px;
+    color: #000000;
+    display: inline-block;
+   	font: italic bold 20px/1 "Calibri", sans-serif;
+    text-align: center;
+}
+
+.my-cta-button:hover{
+    color:   #408000;
+    border: 2px solid #408000;
+}
+
+.my-cta-button:active{
+    box-shadow: 0 0;
+}
+
+.contact-icon{
+	color: #ffffff;
+	padding: 12px;
+}
+
+.contact-icon:hover{
+	color:  #000000;
+}
+
+.footer{
+	flex-shrink: 0;
+	position: relative;
+	padding: 20px;
+	background: linear-gradient(45deg ,#476b6b,#206040, #bfff00);
+	background-size: 500% 500%;
+	animation: change-gradient 10s ease-in-out infinite;
+}
+
+.footer-description{
+	color: #ffffff;
+	margin: 0;
+	font-size: 12px;
+}
+</style>
+
+<body>
+  <div class="jumbotron text-center">
+  </div>
+  
+  <script>
+    function readURL(input) {
+            if (input.files && input.files[0]) {
+                var reader = new FileReader();
+
+                reader.onload = function (e) {
+                    $('#blah')
+                        .attr('src', e.target.result)
+                        .width(500)
+                        .height(500);
+                };
+
+                reader.readAsDataURL(input.files[0]);
+            }
+        }
+</script>
+
+<div class="ml-container">
+  <h2>Cassava Leaf Disease Predictor</h2>
+  <form action="{{ url_for('predict') }}" method="post" enctype="multipart/form-data">
+
+		<div class="form-group">
+    <input onchange="readURL(this);" type="file" name="image" class="form-control" placeholder="Upload Image">
+  	</div>
+
+  	<center><button type="submit" class="my-cta-button">Predict</button></center>
+	</form>
+	<hr>
+	<center><h4 style="color:crimson;"> {{ result }} </h4></center>
+</div>
+<br> <br>
+
+</body>
+</html>
+
+        <!-- Footer -->
+       <div class='footer'>
+           <div class="contact">
+           <center>
+              <a target="_blank" href="https://www.instagram.com/mohit__keshwani"><i class="fab fa-Instagram fa-lg contact-icon"></i></a>
+              <a target="_blank" href="https://github.com/mohit-keshwani/cassava-leaf-disease"><i class="fab fa-github fa-lg contact-icon"></i></a>
+              <a target="_blank" href="https://www.linkedin.com/in/mohit-keshwani"><i class="fab fa-linkedin fa-lg contact-icon"></i></a>
+           <center>
+           </div>
+          <center><p class='footer-description'>Made with ❤️ by Mohit Keshwani</p><center>
+       </div>
+
+    </body>
+</html>

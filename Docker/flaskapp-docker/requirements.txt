@@ -1,0 +1,15 @@
+boto3==1.17.24
+Flask==1.1.2
+gunicorn==19.9.0
+html5lib==1.1
+htmlmin==0.1.12
+itsdangerous==1.1.0
+Jinja2==2.11.2
+json5==0.9.5
+jsonschema
+MarkupSafe==1.1.1
+Werkzeug==0.16.1
+numpy>=1.9.2
+pandas>=0.19
+pillow
+

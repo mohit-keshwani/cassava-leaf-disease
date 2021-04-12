@@ -6,7 +6,7 @@ CNN algorithms and Transfer Learning architectures like VGG-16, MobileNetV2, Den
 All the other requirements can be found at [requirements.txt](https://github.com/mohit-keshwani/cassava-leaf-disease/blob/main/Docker/flaskapp-docker/requirements.txt).
 
 <br>
-<b>You can find the webapp live at:</b> https://ec2-3-22-97-212.us-east-2.compute.amazonaws.com/ <br>
+<b>You can find the webapp live at:</b> https://ec2-3-141-100-98.us-east-2.compute.amazonaws.com/ <br>
 
 ## Dataset and Kaggle Notebook Link
 Dataset was obtained from kaggle.<br>
